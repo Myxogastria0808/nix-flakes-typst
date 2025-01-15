@@ -20,7 +20,8 @@
             tdf
           ];
           shellHook = ''
-            zellij setup --dump-layout default > ./config/layout_file.kdl
+            echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
+            zellij action new-tab --layout ./config/layout.kdl
           '';
         };
       }
