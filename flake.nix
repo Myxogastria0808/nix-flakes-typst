@@ -20,7 +20,7 @@
             tdf
           ];
           shellHook = ''
-            zellij --layout ./config/zellij.yaml
+            zellij setup --dump-layout default > ./config/layout_file.kdl
           '';
         };
       }
