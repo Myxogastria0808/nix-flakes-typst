@@ -20,7 +20,9 @@
             tdf
           ];
           shellHook = ''
-            zellij setup --layout ./config/layout.kdl
+            typst compile ./src/report.typ
+            zellij setup --generate-auto-start zsh
+            zellij --layout ./config/layout_file.kdl
           '';
         };
       }
